@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethany's Pie Shop</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+    <!-- create automatic tags -->
+    <!-- header>nav>ul>li*3>a -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- main indica para a serach engine que esta parte é importante -->
+    <main>
+        <aside><img src="images/logo.png" alt="logo"></aside>
+        <article>
+            <h1>Order</h1>
+
+            <!-- choice customer -->
+            <div class="pie">
+                <img src="" alt="">
+                <div class="columns">
+                    <div class="title"></div>
+                    <div class="price"></div>
+                </div>
+                <p class="desc"></p>
+            </div>
+
+            <form action="http://localhost:7071/api/post" method="POST">
+                <input type="hidden" id="pie-order" name="pie-order">
+                <input type="hidden" id="location" name="location">
+
+
+                <div class="input-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name" />
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name" />
+                </div>
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" />
+                </div>
+                <div class="input-group">
+                    <label for="state">State</label>
+                    <div>
+                        <select name="state" id="state">
+                            <option value="" selected>[ Select option ]</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="postal-code">Address</label>
+                    <input type="text" name="postal-code" id="postal-code" />
+                </div>
+
+                <div class="input-group">
+                    <label for="comments">Address</label>
+                    <textarea type="text" 
+                              name="comments" 
+                              id="comments"
+                              cols="30"
+                              rows="10"
+                              ></textarea>
+                </div>
+                
+                <input type="reset" value="Reset" />
+                <input type="submit" value="Order" />
+            </form>
+        </article>
+    </main>
+    
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="script.js "></script>
+</body>
+</html>
